@@ -28,3 +28,10 @@ a {
   width: 50px;
   text-align: justify;
 }
+
+#delete{
+   height: 35px;
+  width: 70px;
+  text-align: justify;
+  display: flex;
+}

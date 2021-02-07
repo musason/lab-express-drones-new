@@ -48,6 +48,7 @@ router.get("/drones/:id/edit", (req, res, next) => {
   DroneModel.findById(id)
     .then((drone) => {
       res.render("../views/drones/update-form.hbs", { drone });
+      
     })
     .catch(() => {
       console.log("Something went wrong");
@@ -75,16 +76,17 @@ router.post("/drones/:id/edit", (req, res, next) => {
     });
 });
 
-router.get("/drones/:id/delete", (req, res, next) => {
+router.post("/drones/:id/delete", (req, res, next) => {
   // Iteration #5: Delete the drone
   let id = req.params.id;
   DroneModel.findByIdAndDelete(id)
-    .then(() => {
-      res.redirect("/drones");
-    })
-    .catch(() => {
-      console.log("Something went wrong while deleting");
-    });
+      .then(() => {
+        res.redirect("/drones");
+      })
+      .catch(() => {
+        console.log("Something went wrong while deleting");
+        res.redirect("/drones");
+      });
 });
 
 module.exports = router;
