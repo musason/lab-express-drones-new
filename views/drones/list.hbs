@@ -1,1 +1,26 @@
 <h2>Available drones</h2>
+
+{{#each drone}}
+    <ul>
+       <li>
+           Name: {{this.name}} 
+           Propellers: {{this.propellers}} 
+           Max Speed: {{this.maxSpeed}}
+           <form>
+           <a href="/drones/{{this._id}}/edit">
+           <button id="edit" type="button" class="btn btn-primary">Edit</button>
+           </a>
+           </form>
+           <form>
+            <a href="/drones/{{this._id}}/delete">
+           <button id="delete" type="button" class="btn btn-danger">Delete</button>
+           </a>
+           </form>
+       </li>
+    </ul>
+{{/each}}
+
+<div class="d-grid gap-2 col-6 mx-auto">
+  <a href="/drones/create"><button id="create" class="btn btn-info" type="button">Create your own Drone</button></a>
+</div>
+

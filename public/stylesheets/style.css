@@ -6,3 +6,25 @@ body {
 a {
   color: #00b7ff;
 }
+
+.navlinks{
+  padding:3px;
+  text-decoration: none;
+  color: white;
+  float: left;
+}
+
+#nav{
+  justify-content: left;
+}
+
+#create{
+  position:absolute;
+    left: 4%;
+}
+
+#edit{
+  height: 35px;
+  width: 50px;
+  text-align: justify;
+}

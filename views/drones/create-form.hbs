@@ -1,1 +1,26 @@
 <h2>Create a new drone</h2>
+
+<form method="POST" action="/drones/create">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input name="myName" class="form-control" type="text"  aria-label="default input example">
+    <div id="emailHelp" class="form-text">What is the name if your Drone?</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Propeller</label>
+    <input name="myProps" class="form-control" type="text"  aria-label="default input example">
+    <div id="emailHelp" class="form-text">How many Propellers will this drone have</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Maximum Speed</label>
+    <input name="myMaxSpeed" class="form-control" type="text"  aria-label="default input example">
+    <div id="emailHelp" class="form-text">Maximum speed of your drone</div>
+  </div>
+  <button type="submit" class="btn btn-success">Create</button>
+</form>
+    {{#if err}}
+<div class="alert alert-danger" role="alert">
+  {{err}}
+</div>
+{{/if}}
+
